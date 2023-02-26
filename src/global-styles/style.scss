@@ -40,6 +40,41 @@ body {
   background-color: $color-blue-active;
 }
 
+.button_google {
+  max-width: 435px;
+  height: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: $color-white;
+  border-radius: 50px;
+  border: 1px solid $color-black;
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    color: $color-black;
+
+    .google_icon {
+      font-size: 20px;
+    }
+  }
+}
+
+.button_google:hover {
+  border-color: $color-gray-light;
+}
+
+.button_google:active {
+  & div {
+    color: $color-gray-light;
+  }
+
+}
 
 .font_xxl {
   font-size: 36px;
