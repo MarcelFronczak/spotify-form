@@ -1,7 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './registration.scss'
+import GoogleIcon from '../icons8-google-27.svg'
 
 const Registration: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const Registration: React.FC = () => {
           </a>
           <a href="#" className="button_google">
             <div>
-              <FontAwesomeIcon icon={faGoogle} className='google_icon'/>
+              <img src={GoogleIcon} alt="" />
               <p className='font_l'>Sign up with Google</p>
             </div>
           </a>
