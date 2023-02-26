@@ -7,7 +7,7 @@ import Account from './components/account/Account';
 const App: React.FC = () => (
   <>
     <Routes>
-      <Route path='/' element={<Registration />} />
+      <Route path='spotify-form/' element={<Registration />} />
       <Route path='/login' element={<Login />} />
       <Route path='/account' element={<Account />} />
     </Routes>
