@@ -1,0 +1,12 @@
+.registration_form {
+    max-width: 435px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    & .spotify_heading {
+        font-size: 27px;
+        font-weight: 800;
+    }
+}

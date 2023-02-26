@@ -3,7 +3,12 @@
 @import "styles/normalize.scss";
 @import "styles/colors.scss";
 
-body {
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   color: var(--color-white);
 }
