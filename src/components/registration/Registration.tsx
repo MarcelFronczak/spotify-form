@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomSelect from './CustomSelect';
+// import CustomSelect from './CustomSelect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './registration.scss'
@@ -59,7 +59,7 @@ const Registration: React.FC = () => {
         <section className="birth_container">
           <p className="font_m">What&#39;s your date of birth</p>
           <div className="birth_content_box">
-            <CustomSelect />
+            {/* <CustomSelect /> */}
             {/* <div className="birth_input_box">
               <label htmlFor=""></label>
               <select id="select_list">

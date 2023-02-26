@@ -1,27 +1,31 @@
-import { React, useState } from 'react'
+import * as React from 'react'
+import { useState } from 'react'
 
-const CustomSelect: React.FC = () => {
+const CustomSelect = () => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(0);
+  const [selectedOption, setSelectedOption] = useState("Month");
 
   const optionsList = [
-    "Option 1",
-    "Option 2",
-    "Option 3",
-    "Option 4",
-    "Option 5"
+    "Month",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July"
   ];
 
   const toggleOptions = () => {
     setIsOptionsOpen(!isOptionsOpen);
   };
 
-  const setSelectedThenCloseDropdown = (index: number) => {
+  const setSelectedThenCloseDropdown = (index) => {
     setSelectedOption(index);
     setIsOptionsOpen(false);
   };
 
-  const handleKeyDown = (index: number) => (e: any) => {
+  const handleKeyDown = (index) => (e) => {
     switch (e.key) {
       case " ":
       case "SpaceBar":
@@ -34,7 +38,7 @@ const CustomSelect: React.FC = () => {
     }
   };
 
-  const handleListKeyDown = (e: any) => {
+  const handleListKeyDown = (e) => {
     switch (e.key) {
       case "Escape":
         e.preventDefault();
@@ -79,6 +83,7 @@ const CustomSelect: React.FC = () => {
         >
           {optionsList.map((option, index) => (
             <li
+              key={option}
               id={option}
               role="option"
               aria-selected={selectedOption == index}
