@@ -12,6 +12,7 @@ const resolve = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/spotify-form/',
   css: {
     devSourcemap: true,
   },
