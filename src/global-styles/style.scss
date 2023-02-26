@@ -1,16 +1,74 @@
-/// Main Styles File
-/// Here we import all the global Styles files we need for our project.
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 @import "styles/normalize.scss";
-@import "styles/root.scss";
-@import "styles/fonts.scss";
 @import "styles/colors.scss";
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--color-primary);
+  font-family: 'Lato', sans-serif;
+  color: var(--color-white);
 }
 
-p {
-  color: var(--color-on-surface);
+.button_facebook {
+  max-width: 435px;
+  height: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: $color-blue-primary;
+  border-radius: 50px;
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    color: $color-white;
+
+    .facebook_icon {
+      font-size: 20px;
+    }
+  }
 }
+
+.button_facebook:hover {
+  background-color: $color-blue-hover;
+}
+
+.button_facebook:active {
+  background-color: $color-blue-active;
+}
+
+
+.font_xxl {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.font_xl {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.font_l {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.font_m {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.font_s {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -4px;
+}
+
+
