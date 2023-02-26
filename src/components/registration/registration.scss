@@ -1,3 +1,5 @@
+@import "src/global-styles/styles/colors.scss";
+
 .registration_form {
     max-width: 435px;
     display: flex;
@@ -9,4 +11,70 @@
         font-size: 27px;
         font-weight: 800;
     }
+
+    & .buttons {
+        width: 100%;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+
+        & a {
+            margin-bottom: 20px;
+        }
+    }
+
+    & .separation {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 2rem;
+
+        & .line {
+            width: 100%;
+            height: 0px;
+            border-top: 1px solid $color-gray-light;
+            background-color: $color-black;
+        }
+
+        & p {
+            color: $color-gray-light;
+        }
+    }
+
+    & .user_input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+        text-align: left;
+
+        & .input_box {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            & input {
+                all: unset;
+                max-width: 435px;
+                height: 54px;
+                border-radius: 50px;
+                border: 1px solid $color-gray-dark;
+                padding: 0 30px;
+                color: $color-black;
+                font-size: 14px;
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+            }
+
+            & input::placeholder {
+                font-size: 14px;
+                font-weight: 400;
+                color: #848484;
+            }
+        }
+    } 
 }
