@@ -6,6 +6,22 @@ import './registration.scss'
 import GoogleIcon from '../icons8-google-27.svg'
 
 const Registration: React.FC = () => {
+
+  const Months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ]
+
   return (
     <div>
       <form className='registration_form'>
@@ -57,15 +73,27 @@ const Registration: React.FC = () => {
         </section>
 
         <section className="birth_container">
-          <p className="font_m">What&#39;s your date of birth</p>
+          <p className="font_m">What&#39;s your date of birth?</p>
           <div className="birth_content_box">
-            {/* <CustomSelect /> */}
-            {/* <div className="birth_input_box">
-              <label htmlFor=""></label>
-              <select id="select_list">
-                <option value=""></option>
+            <div className="birth_month_box">
+              <label htmlFor="select_list" className='font_s' >Month</label>
+              <select id="select_list" defaultValue="Month">
+                <option value="Month" className='font_s'>Month</option>
+                  <>
+                  {Months.map(month => (
+                    <option key={month}>{month}</option>
+                  ))}
+                  </>
               </select>
-            </div> */}
+            </div>
+            <div className="birth_day_box">
+              <label htmlFor="day" className='font_s' >Day</label>
+              <input type="text" id="day" placeholder="DD"/>
+            </div>
+            <div className='birth_year_box'>
+              <label htmlFor="year" className='font_s' >Year</label>
+              <input type="text" placeholder='YYYY'/>
+            </div>
           </div>
         </section>
       </form>

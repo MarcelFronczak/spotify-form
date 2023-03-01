@@ -7,6 +7,12 @@
     align-items: center;
     text-align: center;
 
+    & input::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        color: #848484;
+    } 
+
     & .spotify_heading {
         font-size: 26px;
         font-weight: 900;
@@ -74,11 +80,56 @@
                 font-weight: 400;
             }
 
-            & input::placeholder {
-                font-size: 14px;
-                font-weight: 400;
-                color: #848484;
-            }
+            // & input::placeholder {
+            //     font-size: 14px;
+            //     font-weight: 400;
+            //     color: #848484;
+            // }
         }
-    } 
+    }  
+
+    & .birth_container {
+        text-align: left;
+        margin-top: 2rem;
+        padding-right: 2rem;
+
+        & input {
+            all: unset;
+            height: 54px;
+            border-radius: 50px;
+            border: 1px solid $color-gray-dark;
+            padding-left: 30px;
+            color: $color-black;
+            font-size: 14px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400; 
+            width: 100%; 
+        }
+
+        & .birth_content_box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 1rem;
+            width: 100%;
+            gap: 20px;
+        }
+
+        & .birth_month_box,
+        & .birth_day_box,
+        & .birth_year_box {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            gap: 12px;
+            width: 100%;
+        }
+
+        & .birth_day_box,
+        & .birth_year_box {
+            max-width: 16%;
+            margin-left: 30px;
+        }
+    }
+  
 }
