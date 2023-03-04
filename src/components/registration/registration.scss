@@ -190,7 +190,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 19px;
-            margin-top: 1rem; 
+            margin-top: 1rem;
 
             & .radio_box {
                 display: flex;
@@ -200,5 +200,61 @@
             }
         }
 
+    }
+
+
+    
+    & .marketing_checkbox {
+      display: block;
+      position: relative;
+      padding-left: 37px;
+      margin-top: 2rem;
+      cursor: pointer;
+      text-align: left;
+
+      & input[type=checkbox] {
+        visibility: hidden;
+    }
+    }
+    
+    .geekmark {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      border-radius: 5px;
+      border: 1px solid $color-gray-dark;
+    }
+    
+    .marketing_checkbox:hover input ~ .geekmark {
+      border-color: $color-green-primary;
+    }
+    
+    .marketing_checkbox input:checked ~ .geekmark {
+      background-color: $color-green-primary;
+      border-color: $color-green-primary;
+    }
+    
+    .geekmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    
+    .marketing_checkbox input:checked ~ .geekmark:after {
+      display: block;
+    }
+      
+    .marketing_checkbox .geekmark:after {
+      left: 7px;
+      bottom: 5px;
+      width: 4px;
+      height: 9px;
+      border: solid white;
+      border-width: 0 1px 1px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
     }
 }

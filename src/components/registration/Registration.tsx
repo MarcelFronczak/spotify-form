@@ -134,6 +134,11 @@ const Registration: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <label className="marketing_checkbox font_s">Share my registration date with Spotify&#39;s content providers for marketing purposes.
+          <input type="checkbox" />
+          <span className="geekmark"></span>
+        </label>
       </form>
 
     </div>
