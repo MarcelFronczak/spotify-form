@@ -123,4 +123,25 @@ body {
   font-weight: 400;
 }
 
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $color-gray-dark;
+  border-radius: 50%;
+}
+
+input[type="radio"]:hover {
+  border-color: $color-green-primary;
+}
+
+input[type="radio"]:checked {
+  border-color: $color-green-primary;
+  background: radial-gradient(circle, rgba(255,255,255,1) 40%, rgba(101,211,110,1) 40%);
+}
 
