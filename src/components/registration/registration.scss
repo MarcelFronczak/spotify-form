@@ -84,7 +84,7 @@
 
     & .birth_container {
         text-align: left;
-        margin-top: 2rem;
+        margin: 2rem 0;
         padding-right: 2rem;
 
         & input {
@@ -161,6 +161,7 @@
                 padding: 17px;
                 border: 1px solid $color-gray-dark;
                 border-radius: 17px;
+                background-color: $color-white;
 
                 li {
                     list-style: none;
@@ -181,4 +182,23 @@
         }
     }
   
+    & .gender_container {
+        text-align: left;
+        width: 100%;
+
+        & .gender_radio_box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 1rem; 
+
+            & .radio_box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 16px;
+            }
+        }
+
+    }
 }

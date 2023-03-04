@@ -109,6 +109,32 @@ const Registration: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <section className="gender_container">
+          <label className="font_m">What&#39;s your gender?</label>
+          <div className="gender_radio_box">
+            <div className='radio_box font_s'>
+              <input type="radio" name="radio" id='radio1' />
+              <label htmlFor='radio1'>Male</label>
+            </div>
+            <div className='radio_box font_s'>
+              <input type="radio" name="radio" id='radio2' />
+              <label htmlFor='radio2'>Female</label>
+            </div>
+            <div className='radio_box font_s'>
+              <input type="radio" name="radio" id='radio3' />
+              <label htmlFor='radio3'>Non-binary</label>
+            </div>
+            <div className='radio_box font_s'>
+              <input type="radio" name="radio" id='radio4' />
+              <label htmlFor='radio4'>Other</label>
+            </div>
+            <div className='radio_box font_s'>
+              <input type="radio" name="radio" id='radio5' />
+              <label htmlFor='radio5'>Prefer not to say</label>
+            </div>
+          </div>
+        </section>
       </form>
 
     </div>
