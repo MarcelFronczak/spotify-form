@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import CustomSelect from './CustomSelect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
