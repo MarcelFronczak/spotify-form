@@ -148,7 +148,7 @@ const Registration: React.FC = () => {
 
         <button type='submit' className="sign_up_button">Sign up</button>
 
-        <p className="redirect_text">Have an account? <Link to='/spotify-form'>Log in</Link></p>
+        <p className="redirect_text">Have an account? <Link to='/spotify-form/login/'>Log in</Link></p>
 
       </form>
 

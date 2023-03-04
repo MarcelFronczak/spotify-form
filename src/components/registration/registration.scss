@@ -1,10 +1,11 @@
 @import "src/global-styles/styles/colors.scss";
 
 .registration_form {
-    max-width: 435px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 442px;
+    width: 100%;
+    display: block;
+    // flex-direction: column;
+    // align-items: center;
     text-align: center;
 
     & input::placeholder {
@@ -21,7 +22,7 @@
     & .buttons {
         width: 100%;
         margin-top: 1.25rem;
-        margin-bottom: 1.25rem;
+        margin-bottom: 2rem;
 
         & a {
             margin-bottom: 20px;
@@ -45,7 +46,6 @@
             width: 100%;
             height: 0px;
             border-top: 1px solid $color-gray-light;
-            background-color: $color-black;
         }
 
         & p {
