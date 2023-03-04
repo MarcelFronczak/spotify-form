@@ -79,12 +79,6 @@
                 font-family: 'Lato', sans-serif;
                 font-weight: 400;
             }
-
-            // & input::placeholder {
-            //     font-size: 14px;
-            //     font-weight: 400;
-            //     color: #848484;
-            // }
         }
     }  
 
@@ -129,6 +123,61 @@
         & .birth_year_box {
             max-width: 16%;
             margin-left: 30px;
+        }
+
+        & .birth_month_box {
+            & .select_placeholder {
+                color:#848484;
+            }
+
+            & .custom_select {
+                all: unset;
+                height: 54px;
+                border-radius: 50px;
+                border: 1px solid $color-gray-dark;
+                padding-left: 30px;
+                color: $color-black;
+                font-size: 14px;
+                font-family: 'Lato', sans-serif;
+                font-weight: 400; 
+                width: 100%;
+                cursor: pointer; 
+                position: relative;    
+            }
+
+            & .arrow_icon {
+                color:#848484;
+                position: absolute;
+                top: 20px; 
+                right: 30px;
+            }
+
+            & .select_list {
+                display: none;
+                left: 0;
+                top: 65px;
+                position: absolute;
+                width: 100%;
+                padding: 17px;
+                border: 1px solid $color-gray-dark;
+                border-radius: 17px;
+
+                li {
+                    list-style: none;
+                    font-family: 'Lato', sans-serif;
+                    margin: 0;
+                    padding: 8px 12px;
+                    border-radius: 8px;
+                }
+
+                li:hover {
+                    background-color: #f0f0f0;
+                }
+            }
+
+            & .select_list.open {
+                display: block;
+            }
         }
     }
   

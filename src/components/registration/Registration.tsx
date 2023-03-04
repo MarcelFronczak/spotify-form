@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import CustomSelect from './CustomSelect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './registration.scss'
 import GoogleIcon from '../icons8-google-27.svg'
 
 const Registration: React.FC = () => {
+
+  const [selectOpen, setSelectOpen] = useState(false);
+  const [selectedMonth, setSelectedMonth] = useState("");
+
+  const handleSelectClick = () => {
+    setSelectOpen(!selectOpen);
+  }
+
+  const handleSelectMonth = (value: string) => {
+    setSelectedMonth(value);
+  }
 
   const Months = [
     "January",
@@ -76,15 +88,16 @@ const Registration: React.FC = () => {
           <p className="font_m">What&#39;s your date of birth?</p>
           <div className="birth_content_box">
             <div className="birth_month_box">
-              <label htmlFor="select_list" className='font_s' >Month</label>
-              <select id="select_list" defaultValue="Month">
-                <option value="Month" className='font_s'>Month</option>
-                  <>
+              <label htmlFor="custom_select" className='font_s' >Month</label>
+              <button type='button' className="custom_select" onClick={handleSelectClick}>
+                {selectedMonth.length === 0 ? (<p className="select_placeholder">Month</p>) : (<p>{selectedMonth}</p>)}
+                <FontAwesomeIcon icon={faChevronDown} className='arrow_icon'/>
+                <ul className={selectOpen ? 'select_list open' : 'select_list'}>
                   {Months.map(month => (
-                    <option key={month}>{month}</option>
+                    <li key={month} value={month} onClick={() => handleSelectMonth(month)}>{month}</li>
                   ))}
-                  </>
-              </select>
+                </ul>
+              </button>
             </div>
             <div className="birth_day_box">
               <label htmlFor="day" className='font_s' >Day</label>
