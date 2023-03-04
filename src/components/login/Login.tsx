@@ -66,7 +66,7 @@ const Login: React.FC = () => {
         <div className="separator"></div>
         <p className="font_xl">You don&#39;t have account yet?</p>
         <Link to='/spotify-form/' className="sign_up_button_redirect">Sign up for spotify</Link>
-        <p className="non_visible">nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn</p>   
+        <p className="non_visible">nnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnn</p>   
       </form>
 
     </div>
