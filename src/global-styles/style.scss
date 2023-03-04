@@ -123,6 +123,7 @@ body {
   font-weight: 400;
 }
 
+//Custom radio input
 input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
@@ -143,6 +144,24 @@ input[type="radio"]:hover {
 input[type="radio"]:checked {
   border-color: $color-green-primary;
   background: radial-gradient(circle, rgba(255,255,255,1) 40%, rgba(101,211,110,1) 40%);
+}
+
+
+//Sign up button
+.sign_up_button {
+  all: unset;
+  width: 173px;
+  height: 55px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: $color-green-primary;
+  color: $color-black;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sign_up_button:active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #65D36E;
 }
 
 
