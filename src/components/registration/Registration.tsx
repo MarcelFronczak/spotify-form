@@ -104,7 +104,7 @@ const Registration: React.FC = () => {
             </div>
             <div className='birth_year_box'>
               <label htmlFor="year" className='font_s' >Year</label>
-              <input type="text" placeholder='YYYY'/>
+              <input type="text" placeholder='YYY'/>
             </div>
           </div>
         </section>
