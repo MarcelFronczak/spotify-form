@@ -139,6 +139,11 @@ const Registration: React.FC = () => {
           <input type="checkbox" />
           <span className="geekmark"></span>
         </label>
+
+        <section className="terms_privacy_policy_container">
+          <p>By clicking on sing-up. you agree to Spotify&#39;s <a href='#'>Terms and Conditions of Use</a>.</p>
+          <p>To learn more about how. Spotify collects, uses, shares and protects your personal data, please see <a href='#'>Spotify&#39;s Privacy Policy</a>.</p>
+        </section>
       </form>
 
     </div>

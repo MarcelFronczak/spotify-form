@@ -257,4 +257,25 @@
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
     }
+
+    & .terms_privacy_policy_container {
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+
+        & p {
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        & p:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        & a {
+            color: $color-green-primary !important;
+            font-weight: 500;
+            white-space: nowrap;
+        }   
+    }
 }
