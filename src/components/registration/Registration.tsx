@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
@@ -146,6 +147,9 @@ const Registration: React.FC = () => {
         </section>
 
         <button type='submit' className="sign_up_button">Sign up</button>
+        
+        <p className="redirect_text">Have an account? <Link to='/'>Log in</Link></p>
+
       </form>
 
     </div>

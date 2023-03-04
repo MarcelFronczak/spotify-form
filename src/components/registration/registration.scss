@@ -274,9 +274,42 @@
         }
 
         & a {
+            text-decoration: none;
             color: $color-green-primary !important;
             font-weight: 500;
             white-space: nowrap;
-        }   
+            position: relative;
+        }  
+        
+        & a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 1px;
+            background-color: $color-green-primary;  
+        }
+    }
+
+    & .redirect_text {
+        font-weight: 600;
+        margin-top: 2rem;
+
+        & a {
+            color: $color-green-primary;
+            text-decoration: none;
+            position: relative;
+        }
+
+        & a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 1px;
+            background-color: $color-green-primary;
+        }
     }
 }
