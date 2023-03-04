@@ -168,11 +168,11 @@
           border: 1px solid $color-gray-dark;
         }
         
-        & .marketing_checkbox:hover input ~ .geekmark {
+        & .remember_me_checkbox:hover input ~ .geekmark {
           border-color: $color-green-primary;
         }
         
-        & .marketing_checkbox input:checked ~ .geekmark {
+        & .remember_me_checkbox input:checked ~ .geekmark {
           background-color: $color-green-primary;
           border-color: $color-green-primary;
         }
@@ -183,11 +183,11 @@
           display: none;
         }
         
-        & .marketing_checkbox input:checked ~ .geekmark:after {
+        & .remember_me_checkbox input:checked ~ .geekmark:after {
           display: block;
         }
           
-        & .marketing_checkbox .geekmark:after {
+        & .remember_me_checkbox .geekmark:after {
           left: 7px;
           bottom: 5px;
           width: 4px;
