@@ -62,7 +62,7 @@ const Registration: React.FC = () => {
           <hr className="line"></hr>
         </div>
 
-        <h2 className='font_xl'>Sign up with you email address</h2>
+        <h2 className='font_xl'>Sign up with your email address</h2>
 
         <section className="user_input">
           <div className="input_box">
