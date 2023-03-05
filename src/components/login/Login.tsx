@@ -48,7 +48,7 @@ const Login: React.FC = () => {
           </div>
           <div className="input_box">
             <label htmlFor="password_login" className='font_m' >Password</label>
-            <input type="text" id='password_login' placeholder='Password' />
+            <input type="password" id='password_login' placeholder='Password' />
           </div>
           <a href='#' className="font_s">Do not you remember your password?</a>
         </section>

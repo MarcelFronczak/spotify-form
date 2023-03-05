@@ -75,7 +75,7 @@ const Registration: React.FC = () => {
           </div>
           <div className="input_box">
             <label htmlFor="create_password" className='font_m' >Create a password</label>
-            <input type="text" id='create_password' placeholder='Create a password.' />
+            <input type="password" id='create_password' placeholder='Create a password.' />
           </div>
           <div className="input_box">
             <label htmlFor="name" className='font_m' >What should we call you?</label>
@@ -89,7 +89,7 @@ const Registration: React.FC = () => {
           <div className="birth_content_box">
             <div className="birth_month_box">
               <label htmlFor="custom_select" className='font_s' >Month</label>
-              <button type='button' className="custom_select" onClick={handleSelectClick}>
+              <button type='button' className={selectedMonth.length !== 0 ? 'custom_select filled' : 'custom_select'} onClick={handleSelectClick}>
                 {selectedMonth.length === 0 ? (<p className="select_placeholder">Month</p>) : (<p>{selectedMonth}</p>)}
                 <FontAwesomeIcon icon={faChevronDown} className='arrow_icon'/>
                 <ul className={selectOpen ? 'select_list open' : 'select_list'}>

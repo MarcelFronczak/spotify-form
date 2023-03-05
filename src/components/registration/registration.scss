@@ -151,6 +151,11 @@
                 position: relative;    
             }
 
+            & .custom_select:hover,
+            & .custom_select.filled {
+                border-color: $color-black;
+            }
+
             & .arrow_icon {
                 color:#848484;
                 position: absolute;
