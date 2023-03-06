@@ -22,6 +22,7 @@
     "@typescript-eslint/comma-dangle": "off",
     "quotes": "off",
     "@typescript-eslint/quotes": "off",
-    "@typescript-eslint/member-delimiter-style": "off"
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }

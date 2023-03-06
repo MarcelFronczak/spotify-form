@@ -88,14 +88,6 @@ body {
 
 }
 
-input[type=text]:hover,
-input[type=text]:not(:placeholder-shown),
-input[type=password]:hover,
-input[type=password]:not(:placeholder-shown)
- {
-  border: 1px solid black !important;
-}
-
 .font_xxl {
   font-size: 36px;
   font-weight: 700;

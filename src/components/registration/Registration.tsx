@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, SyntheticEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
@@ -7,9 +7,22 @@ import './registration.scss'
 import GoogleIcon from '../icons8-google-27.svg'
 
 const Registration: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState(false);
 
   const [selectOpen, setSelectOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState("");
+
+  const handleEmailChange = (e: SyntheticEvent) => {
+    const value = (e.target as HTMLInputElement).value;
+    setEmail(value)
+    const regex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm"); //eslint-disable-line
+    if (regex.test(value) || value.length == 0) {
+      setEmailError(false);
+    } else if (!(regex.test(value)) && value.length !== 0 ) {
+      setEmailError(true);
+    }
+  }
 
   const handleSelectClick = () => {
     setSelectOpen(!selectOpen);
@@ -67,11 +80,12 @@ const Registration: React.FC = () => {
         <section className="user_input">
           <div className="input_box">
             <label htmlFor="email" className='font_m' >What&#39;s your email?</label>
-            <input type="text" id='email' placeholder='Enter your email.' />
+            <input className={emailError ? "error" : ''} type="text" id='email' placeholder='Enter your email.' value={email} onInput={handleEmailChange}/>
+            <p className={emailError ? 'error_message active' : 'error_message'}>Incorrect e-mail</p>          
           </div>
           <div className="input_box">
             <label htmlFor="email_confirm" className='font_m' >Confirm your email</label>
-            <input type="text" id='email_confirm' placeholder='Enter your email again.' />   
+            <input type="text" id='email_confirm' placeholder='Enter your email again.' />
           </div>
           <div className="input_box">
             <label htmlFor="create_password" className='font_m' >Create a password</label>
