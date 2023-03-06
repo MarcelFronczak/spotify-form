@@ -1,7 +1,6 @@
 //Project in progress
 
-Clone of spotify registration / login form built with React + typescript.
-Redux for state management and Firebase for user sign in / login.
+Clone of spotify registration / login form built with React / Typescript / SCSS and Firebase Authentication.
 
 Live Page: https://marcelfronczak.github.io/spotify-form/
 
