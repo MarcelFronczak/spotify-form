@@ -110,7 +110,7 @@ const Registration: React.FC = () => {
           <div className="input_box">
             <label htmlFor="email_confirm" className='font_m' >Confirm your email</label>
             <input className={confirmEmailError ? "error" : ''} type="text" id='email_confirm' placeholder='Enter your email again.' onInput={handleEmailConfirmation} />
-            <p className={confirmEmailError ? 'error_message active' : 'error_message'}>Please provide same email</p>  
+            <p className={confirmEmailError ? 'error_message active' : 'error_message'}>Please provide same e-mail</p>  
           </div>
           <div className="input_box">
             <label htmlFor="create_password" className='font_m' >Create a password</label>
