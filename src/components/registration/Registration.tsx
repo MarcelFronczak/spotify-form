@@ -12,26 +12,39 @@ const Registration: React.FC = () => {
 
   const [confirmEmailError, setConfirmEmailError] = useState(false);
 
+  const [password, setPassword] = useState('');
+  const [passwordError, setPasswordError] = useState(false);
+
   const [selectOpen, setSelectOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState("");
 
   const handleEmailChange = (e: SyntheticEvent) => {
-    const value = (e.target as HTMLInputElement).value;
-    setEmail(value)
+    const userEmail = (e.target as HTMLInputElement).value;
+    setEmail(userEmail)
     const regex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm"); //eslint-disable-line
-    if (regex.test(value) || value.length === 0) {
+    if (regex.test(userEmail) || userEmail.length === 0) {
       setEmailError(false);
-    } else if (!(regex.test(value)) && value.length !== 0 ) {
+    } else {
       setEmailError(true);
     }
   }
 
   const handleEmailConfirmation = (e: SyntheticEvent) => {
-    const value = (e.target as HTMLInputElement).value;
-    if (value === email || value.length === 0) {
+    const confirmedEmail = (e.target as HTMLInputElement).value;
+    if (confirmedEmail === email || confirmedEmail.length === 0) {
       setConfirmEmailError(false)
-    } else if(value !== email && value.length !== 0) {
+    } else {
       setConfirmEmailError(true);
+    }
+  }
+
+  const handlePasswordChange = (e: SyntheticEvent) => {
+    const userPassword = (e.target as HTMLInputElement).value;
+    setPassword(userPassword);
+    if (userPassword.length >= 6 || userPassword.length === 0) {
+      setPasswordError(false);
+    } else {
+      setPasswordError(true);
     }
   }
 
@@ -101,7 +114,8 @@ const Registration: React.FC = () => {
           </div>
           <div className="input_box">
             <label htmlFor="create_password" className='font_m' >Create a password</label>
-            <input type="password" id='create_password' placeholder='Create a password.' />
+            <input className={passwordError ? 'error' : ''} type="password" id='create_password' placeholder='Create a password.' onInput={handlePasswordChange} />
+            <p className={passwordError ? 'error_message active' : 'error_message'}>Password should be at least 6 characters</p>        
           </div>
           <div className="input_box">
             <label htmlFor="name" className='font_m' >What should we call you?</label>
