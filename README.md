@@ -1,6 +1,7 @@
 //Project in progress
 
 Clone of spotify registration / login form built with React / Typescript / SCSS and Firebase Authentication.
+The only possibility to sign up / sign in is by providing email address and password. Google, Facebook and Apple buttons are disabled.
 
 Live Page: https://marcelfronczak.github.io/spotify-form/
 
