@@ -92,6 +92,12 @@
               border: 1px solid black;
             }
 
+            & input[type=text]:not(:placeholder-shown),
+            & input[type=password]:not(:placeholder-shown)
+             {
+              border: 1px solid $color-green-primary;
+            }
+
             & .error {
                 border-color: $color-error !important;
             }
