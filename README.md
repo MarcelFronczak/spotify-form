@@ -1,6 +1,6 @@
 //Project in progress
 
-Clone of spotify registration / login form.
+Clone of spotify registration / login form with input validation.
 The only possibility to sign up / sign in is by providing email address and password. Google, Facebook and Apple buttons are disabled.
 
 Tech stack: React, Typescript, SCSS, Firebase
