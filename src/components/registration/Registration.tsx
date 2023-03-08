@@ -18,6 +18,10 @@ const Registration: React.FC = () => {
   const [selectOpen, setSelectOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState("");
 
+  const [dayError, setDayError] = useState(false);
+
+  const [yearError, setYearError] = useState(false);
+
   const handleEmailChange = (e: SyntheticEvent) => {
     const userEmail = (e.target as HTMLInputElement).value;
     setEmail(userEmail)
@@ -54,6 +58,18 @@ const Registration: React.FC = () => {
 
   const handleSelectMonth = (value: string) => {
     setSelectedMonth(value);
+  }
+
+  const handleDayInput = (e: SyntheticEvent) => {
+    const day = (e.target as HTMLInputElement).value;
+    const dayNumber = parseInt((e.target as HTMLInputElement).value);
+    day.length === 0 || (dayNumber >= 1 && dayNumber <= 31) ? setDayError(false) : setDayError(true);
+  }
+
+  const handleYearInput = (e: SyntheticEvent) => {
+    const year = (e.target as HTMLInputElement).value;
+    const yearNumber = parseInt((e.target as HTMLInputElement).value);
+    year.length === 0 || (yearNumber >= 1920 && yearNumber <= 2005) ? setYearError(false) : setYearError(true);
   }
 
   const Months = [
@@ -141,11 +157,11 @@ const Registration: React.FC = () => {
             </div>
             <div className="birth_day_box">
               <label htmlFor="day" className='font_s' >Day</label>
-              <input type="text" id="day" placeholder="DD"/>
+              <input type="text" id="day" placeholder="DD" className={dayError ? 'error' : ''} onInput={handleDayInput} />
             </div>
             <div className='birth_year_box'>
               <label htmlFor="year" className='font_s' >Year</label>
-              <input type="text" placeholder='YYY'/>
+              <input type="text" placeholder='YYY' className={yearError ? 'error' : ''} onInput={handleYearInput}/>
             </div>
           </div>
         </section>

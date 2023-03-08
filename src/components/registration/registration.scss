@@ -139,6 +139,24 @@
             width: 100%; 
         }
 
+        & input[type=text]:hover,
+        & input[type=text]:not(:placeholder-shown),
+        & input[type=password]:hover,
+        & input[type=password]:not(:placeholder-shown)
+         {
+          border: 1px solid black;
+        }
+
+        & input[type=text]:not(:placeholder-shown),
+        & input[type=password]:not(:placeholder-shown)
+         {
+          border: 1px solid $color-green-primary;
+        }
+
+        & input.error {
+            border-color: $color-error !important;
+        }
+
         & .birth_content_box {
             display: flex;
             flex-direction: row;
@@ -185,8 +203,12 @@
             }
 
             & .custom_select:hover,
-            & .custom_select.filled {
+            & .custom_select:focus {
                 border-color: $color-black;
+            }
+
+            & .custom_select.filled {
+                border-color: $color-green-primary;
             }
 
             & .arrow_icon {
