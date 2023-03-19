@@ -5,6 +5,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './registration.scss'
 import GoogleIcon from '../icons8-google-27.svg'
+import {UserAuth} from "@/context/AuthContext";
 
 const Registration: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -21,6 +22,21 @@ const Registration: React.FC = () => {
   const [dayError, setDayError] = useState(false);
 
   const [yearError, setYearError] = useState(false);
+
+  const [error, setError] = useState('');
+
+  const {createUser} = UserAuth(); 
+
+  const handleSubmit = async (e: SyntheticEvent) => {
+    e.preventDefault();
+    setError('')
+    try {
+      await createUser(email, password);
+    } catch (e: any) {
+      setError(e.message);
+      console.log(e.message);
+    }
+  }
 
   const handleEmailChange = (e: SyntheticEvent) => {
     const userEmail = (e.target as HTMLInputElement).value;
@@ -89,7 +105,7 @@ const Registration: React.FC = () => {
 
   return (
     <div>
-      <form className='registration_form'>
+      <form onSubmit={handleSubmit} className='registration_form'>
         <p className="spotify_heading">Spotify</p>
 
         <h1 className="font_xxl">Sign up for free to start listening.</h1>

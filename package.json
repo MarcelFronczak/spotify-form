@@ -19,7 +19,9 @@
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "dotenv": "^16.0.3",
     "firebase": "^9.17.2",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1"
@@ -41,6 +43,8 @@
     "sass": "^1.58.0",
     "typescript": "^4.9.5",
     "vite": "^4.1.0",
-    "vite-plugin-eslint": "^1.8.1"
+    "vite-plugin-eslint": "^1.8.1",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
   }
 }
