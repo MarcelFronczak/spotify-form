@@ -1,15 +1,42 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState, SyntheticEvent} from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faApple } from '@fortawesome/free-brands-svg-icons'
 import GoogleIcon from '../icons8-google-27.svg'
 import './login.scss'
+import {UserAuth} from "@/context/AuthContext";
 
 const Login: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  const { signIn } = UserAuth();
+
+  const handleEmailChange = (e: SyntheticEvent) => {
+    setEmail((e.target as HTMLInputElement).value)
+  }
+
+  const handlePasswordChange = (e: SyntheticEvent) => {
+    setPassword((e.target as HTMLInputElement).value)
+  }
+
+  const handleSubmit = async (e: SyntheticEvent) => {
+      e.preventDefault();
+      setError('')
+      try {
+        await signIn(email, password);
+        navigate('/spotify-form/account');
+      } catch (e: any) {
+        setError(e.message);
+        alert(e.message);
+      }
+  }
 
   return (
     <div className='wrap'>
-      <form className='login_form'>
+      <form className='login_form' onSubmit={handleSubmit}>
         <p className="spotify_heading">Spotify</p>
 
         <h4 className="font_l">Please sign in to Spotify to continue.</h4>
@@ -44,11 +71,11 @@ const Login: React.FC = () => {
         <section className="user_input">
           <div className="input_box">
             <label htmlFor="email_login" className='font_m'>Email address or username</label>
-            <input type="text" id='email_login' placeholder='Email address or username' />   
+            <input type="text" id='email_login' placeholder='Email address or username' value={email} onInput={handleEmailChange}/>   
           </div>
           <div className="input_box">
             <label htmlFor="password_login" className='font_m' >Password</label>
-            <input type="password" id='password_login' placeholder='Password' />
+            <input type="password" id='password_login' placeholder='Password' value={password} onInput={handlePasswordChange}/>
           </div>
           <a href='#' className="font_s">Do not you remember your password?</a>
         </section>

@@ -1,5 +1,5 @@
-import React, { useState, useRef, SyntheticEvent } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, SyntheticEvent } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
@@ -27,14 +27,17 @@ const Registration: React.FC = () => {
 
   const {createUser} = UserAuth(); 
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
     setError('')
     try {
       await createUser(email, password);
+      navigate('/spotify-form/account');
     } catch (e: any) {
       setError(e.message);
-      console.log(e.message);
+      alert(e.message);
     }
   }
 
