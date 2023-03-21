@@ -1,0 +1,31 @@
+@import "src/global-styles/styles/colors.scss";
+
+.account_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    & span {
+        color: $color-green-primary;
+    }
+
+    .logout {
+        all: unset;
+        padding: 12px 14px;
+        border-radius: 50px;
+        border: 1px solid $color-gray-darker;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .logout:hover {
+        background-color: $color-gray-darker;
+        color: white;
+    }
+}
+

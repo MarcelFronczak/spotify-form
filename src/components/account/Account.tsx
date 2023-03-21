@@ -1,6 +1,7 @@
 import React from 'react'
 import {UserAuth} from "@/context/AuthContext";
 import {useNavigate} from 'react-router-dom'
+import './account.scss'
 
 const Account: React.FC = () => {
   const navigate = useNavigate();
@@ -18,10 +19,10 @@ const Account: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className='account_section'>
       <h2>Account</h2>
-      <h4>User Email: {user && user.email}</h4>
-      <button onClick={handleLogout}>Logout</button>
+      <h4><span>User Email:</span> {user && user.email}</h4>
+      <button className='logout' onClick={handleLogout}>Logout</button>
     </div>
   )
 }
