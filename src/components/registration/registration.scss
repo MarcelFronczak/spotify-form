@@ -124,14 +124,13 @@
     & .birth_container {
         text-align: left;
         margin: 2rem 0;
-        padding-right: 2rem;
 
         & input {
             all: unset;
             height: 54px;
             border-radius: 50px;
             border: 1px solid $color-gray-dark;
-            padding-left: 30px;
+            padding-left: 25%;
             color: $color-black;
             font-size: 14px;
             font-family: 'Lato', sans-serif;
@@ -178,11 +177,13 @@
 
         & .birth_day_box,
         & .birth_year_box {
-            max-width: 16%;
-            margin-left: 30px;
+            & input {
+                box-sizing: border-box;
+            }
         }
 
         & .birth_month_box {
+            min-width: 43%;
             & .select_placeholder {
                 color:#848484;
             }
@@ -200,6 +201,7 @@
                 width: 100%;
                 cursor: pointer; 
                 position: relative;    
+                box-sizing: border-box;
             }
 
             & .custom_select:hover,
