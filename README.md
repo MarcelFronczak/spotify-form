@@ -2,6 +2,7 @@ Clone of Spotify's registration / login form with dynamic input validation.
 Possibility to sign up / sign in by providing email address and password (Google, Facebook and Apple buttons are disabled).
 
 Tech stack: React, Typescript, SCSS, Firebase
+Libraries: React Router, FontAwesome
 
 Live Page: https://marcelfronczak.github.io/spotify-form/
 
